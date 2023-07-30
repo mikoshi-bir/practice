@@ -1,0 +1,110 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  padding-left: 102px;
+  padding-right: 102px;
+}
+
+nav ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+nav a {
+  color: #807d7e;
+  text-decoration: none;
+}
+.active a {
+  color: #3c4242;
+}
+header,
+nav {
+  display: inline-block;
+}
+
+.main-section {
+  width: 100%;
+  background-image: url("Banner.png");
+  height: 716px;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+}
+
+h1, h5, h4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.section-description {
+  padding-left: 193px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37.771px; /* 118.035% */
+  letter-spacing: 0.157px;
+  text-transform: capitalize;
+  gap: 40px;
+}
+.center {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 93.622px; /* 120.028% */
+  letter-spacing: 0.315px;
+}
+  .button {
+    width: 250px;
+    height: 61px;
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    padding: 16px 72px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .text {
+    color: #3c4242;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+/* main {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  width: 1000px;
+  height: 500px;
+  align-items: center;
+  flex-shrink: 0;
+} */
