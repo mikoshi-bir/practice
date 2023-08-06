@@ -1,0 +1,137 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+  }
+
+.logo {
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+
+}
+.navbar {
+  z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: white;
+    font-size: 22px;
+}
+.nav-icons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+.main-section {
+background-color: rgb(22, 81, 102);
+min-height: 100vh;
+}
+.stars {
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 62px;
+}
+.flower {
+  max-width: 690px ;
+  height: auto;
+  margin-top: auto;
+}
+.flower-box {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+.ul {
+    display: grid;
+    grid-auto-flow: column ;
+    justify-content: center;
+    gap: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+.main-text {
+  
+  display: grid;
+  padding-left: 100px;
+  padding-top: 130px;
+  grid-template-rows: 170px 130px 160px 80px;
+  color: aliceblue;
+  
+}
+h1 {
+  margin: 0;
+  font-size: 82px;
+  line-height: 90px;
+}
+h2 {
+  margin: 0;
+  font-size: 82px;
+color: #05FF00;;
+}
+.text {
+  line-height: 40px;
+  margin: 0;
+  font-size: 24px;
+}
+.main-button {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 40px;
+}
+.button {
+  width: 206px;
+  height: 80px;
+  border: 0;
+  border-radius: 10px;
+  background: #54C352;
+  font-size: 22px;
+  color: rgb(253, 253, 253);
+  cursor: pointer;
+  transition: 0.2s background ease-in-out;
+
+}
+.button:hover {
+  background: #439e42;
+}
+.button:active {
+  background: #357c34;
+}
+.explore {
+  padding-left: 25px;
+  align-self: center;
+}
+.arrow {
+  position: relative;
+  top: 3px;
+  left: 10px;
+}
+.end {
+  width: 709px;
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 40px;
+  font-size: 22px;
+}
+.numbers {
+  color: #05FF00;
+  font-size: 52px;
+}
