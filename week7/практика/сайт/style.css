@@ -1,0 +1,224 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+}
+
+.navbar {
+  z-index: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+  font-size: 22px;
+}
+.nav-icons {
+  display: flex;
+  gap: 40px;
+}
+.main-section {
+  background-color: rgb(22, 81, 102);
+  min-height: 100vh;
+}
+.stars {
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 62px;
+  z-index: 1;
+}
+
+.stars img {
+  height: auto;
+  max-width: 100%;
+}
+
+.flower {
+  max-width: 590px;
+  width: 40vw;
+  height: auto;
+  margin-top: auto;
+}
+
+.flower-box {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+.ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 70px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.main-text {
+  display: grid;
+  padding-left: 100px;
+  padding-top: 40px;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 20px;
+  color: aliceblue;
+  position: relative;
+  z-index: 2;
+  max-width: 595px;
+}
+h1 {
+  margin: 0;
+  font-size: 82px;
+  line-height: 90px;
+}
+.green {
+  color: #05ff00;
+}
+.text {
+  line-height: 40px;
+  margin: 0;
+  font-size: 24px;
+}
+.main-button {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 40px;
+}
+
+.button {
+  width: 206px;
+  height: 80px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #54c352;
+  color: rgb(253, 253, 253);
+
+  font-size: 22px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s background ease-in-out;
+}
+
+.button:hover {
+  background: #439e42;
+}
+.button:active {
+  background: #357c34;
+}
+.explore {
+  padding-left: 25px;
+  align-self: center;
+}
+.arrow {
+  position: relative;
+  top: 3px;
+  left: 10px;
+}
+.end {
+  width: 709px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  gap: 20px;
+}
+.numbers {
+  color: #05ff00;
+  font-size: 52px;
+}
+/* Media Queries for smaller screens */
+@media (max-width: 1024px) {
+  .navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .main-text {
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto auto; /* Three rows for logo, menu, and icons */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .ul {
+    display: grid; /* Keep the navbar items visible on smaller screens */
+    grid-auto-flow: row; /* Change the direction to vertical */
+    gap: 15px; /* Adjust the gap between items */
+    justify-content: start;
+    margin-bottom: 15px;
+  }
+
+  .navbar-li {
+    font-size: 18px; /* Adjust font size for navbar items */
+  }
+
+  .main-text {
+    padding-left: 20px;
+  }
+
+  h1,
+  h2 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .button {
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .end {
+    width: 100%;
+    font-size: 18px; /* Adjust font size for the end section */
+  }
+
+  .numbers {
+    font-size: 42px;
+  }
+
+  .flower-box {
+    display: none; /* Hide the flower on small screens */
+  }
+}
