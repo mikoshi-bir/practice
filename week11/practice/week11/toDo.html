@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .task-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .task {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+
+      .task.completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      .task input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ToDo List</h1>
+
+    <input type="text" id="taskInput" placeholder="Введите задачу" />
+    <button id="addButton">Добавить</button>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <script>
+      var taskInput = document.getElementById("taskInput");
+      var addButton = document.getElementById("addButton");
+      var taskList = document.getElementById("taskList");
+
+      addButton.addEventListener("click", createTask);
+      taskList.addEventListener("click", checkTask);
+
+      function createTask() {
+        var taskText = taskInput.value.trim();
+
+        if (taskText !== "") {
+          var task = document.createElement("li");
+          var checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+
+          task.appendChild(checkbox);
+          task.appendChild(document.createTextNode(taskText));
+          taskList.appendChild(task);
+
+          taskInput.value = "";
+        }
+      }
+
+      function checkTask(event) {
+        var element = event.target;
+
+        if (element.tagName === "INPUT" && element.type === "checkbox") {
+          element.parentNode.classList.toggle("completed");
+        }
+      }
+    </script>
+  </body>
+</html>
