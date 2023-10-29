@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Калькулятор ИМТ</title>
+    <script>
+      function calculateBMI() {
+        const weight = parseFloat(document.getElementById("weight").value);
+        const height = parseFloat(document.getElementById("height").value);
+
+        const squaredHeight = Math.pow(height, 2);
+        const bmi = weight / squaredHeight;
+        const roundedBMI = Math.round(bmi * 100) / 100;
+
+        document.getElementById("result").textContent =
+          "Индекс массы тела (ИМТ): " + roundedBMI;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Калькулятор ИМТ</h1>
+
+    <label for="weight">Вес (кг):</label>
+    <input type="number" id="weight" />
+
+    <br />
+
+    <label for="height">Рост (м):</label>
+    <input type="number" step="0.01" id="height" />
+
+    <br />
+
+    <button onclick="calculateBMI()">Рассчитать ИМТ</button>
+
+    <br />
+
+    <p id="result"></p>
+  </body>
+</html>
