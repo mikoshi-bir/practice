@@ -389,7 +389,6 @@ class Square {
   }
 }
 
-// Создание и вывод объекта square
 const square = new Square(10);
 console.log(square.side);
 
@@ -397,6 +396,6 @@ console.log(square.side);
 
 //Задание 30
 //Добавьте в класс Square метод calculateArea, который будет вычислять и возвращать площадь квадрата (произведение длины стороны на саму себя). Создайте объект square2 на основе класса Square со стороной 5 и выведите его площадь квадрата в консоль с помощью метода calculateArea.
-// Создание объекта square2 и вывод площади квадрата
+
 const square2 = new Square(5);
 console.log(square2.calculateArea());
