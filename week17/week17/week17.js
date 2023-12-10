@@ -174,9 +174,9 @@ class BankAccount15 {
   withdraw(amount) {
     if (amount <= this.balance) {
       this.balance -= amount;
-      console.log("Успешно"); //Уменьшите баланс на заданную сумму
+      console.log("Успешно");
     } else {
-      console.log("Ошибка. Недостаточно средств"); //Выводите в консоль сообщение
+      console.log("Ошибка. Недостаточно средств"); 
     }
   }
 }
@@ -266,14 +266,12 @@ class Calculator {
 //Создайте класс Person. Класс должен содержать свойства name, age и city. Создайте на его основе объект person и выведите его свойства в консоль.
 
 class Person {
-  // Конструктор класса, который инициализирует свойства
   constructor(name, age, city) {
     this.name = name;
     this.age = age;
     this.city = city;
   }
 
-  // Метод для изменения города
   changeCity(newCity) {
     this.city = newCity;
   }
@@ -289,13 +287,10 @@ console.log(person);
 
 const person2 = new Person("Иван", 25, "Санкт-Петербург");
 
-// Вывод первоначального значения свойства city объекта person2 в консоль
-console.log(person2.city); // Выведет 'Санкт-Петербург'
+console.log(person2.city); 
 
-// Вызов метода changeCity для объекта person2
 person2.changeCity("New York");
 
-// Вывод нового значения свойства city объекта person2 в консоль
 console.log(person2.city); // Выведет 'New York'
 
 //Ваш код
@@ -311,7 +306,6 @@ class Employee {
     this.salary = salary;
   }
 
-  // Метод для расчета бонуса и увеличения зарплаты
   calculateBonus(bonusPercent) {
     this.salary += this.salary * (bonusPercent / 100);
   }
@@ -337,7 +331,6 @@ class Product {
     this.quantity = quantity;
   }
 
-  // Метод для расчета общей стоимости продукта
   calculateTotalPrice() {
     return this.price * this.quantity;
   }
@@ -359,7 +352,6 @@ console.log(product2.calculateTotalPrice());
 //Задание 27
 //Создайте класс Triangle. Класс должен содержать свойства side1, side2 и side3, которые представляют длины сторон треугольника. Создайте на его основе объект triangle и выведите его свойства в консоль.
 
-// Создание класса Triangle с методом calculatePerimeter
 class Triangle {
   constructor(side1, side2, side3) {
     this.side1 = side1;
@@ -367,13 +359,11 @@ class Triangle {
     this.side3 = side3;
   }
 
-  // Метод для расчета периметра треугольника
   calculatePerimeter() {
     return this.side1 + this.side2 + this.side3;
   }
 }
 
-// Создание и вывод объекта triangle
 const triangle = new Triangle(10, 20, 15);
 console.log(triangle.side1, triangle.side2, triangle.side3);
 //Ваш код
@@ -381,7 +371,6 @@ console.log(triangle.side1, triangle.side2, triangle.side3);
 //Задание 28
 //Добавьте в класс Triangle метод calculatePerimeter, который будет возвращать периметр треугольника (сумма длин всех сторон). Создайте объект triangle2 на основе класса Triangle со сторонами 3, 4 и 5. Выведите периметр треугольника в консоль с помощью метода calculatePerimeter.
 
-// Создание объекта triangle2 и вывод периметра треугольника
 const triangle2 = new Triangle(3, 4, 5);
 console.log(triangle2.calculatePerimeter());
 
@@ -390,13 +379,11 @@ console.log(triangle2.calculatePerimeter());
 //Задание 29
 //Создайте класс Square. Класс должен содержать свойство side, представляющее длину стороны квадрата. Создайте на его основе объект square и выведите его свойство в консоль.
 
-// Создание класса Square с методом calculateArea
 class Square {
   constructor(side) {
     this.side = side;
   }
 
-  // Метод для расчета площади квадрата
   calculateArea() {
     return this.side * this.side;
   }
