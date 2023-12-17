@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Планировщик задач</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .task-input {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .task-input input {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .task-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .task-list li input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .empty-message {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Введите задачу">
+      <button id="addTaskButton">Добавить</button>
+    </div>
+    <ul class="task-list" id="taskList"></ul>
+    <button id="clearButton" disabled>Очистить список</button>
+    <p id="emptyMessage" class="empty-message">Задачи отсутствуют</p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
