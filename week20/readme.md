@@ -1,0 +1,2 @@
+Теория по ссылке: https://fortunate-taste-a91.notion.site/20-1f5d7a52c52743ee928d87db97c2d9c4?pvs=4
+Soft skills по ссылке: https://fortunate-taste-a91.notion.site/20-soft-skills-3856f43c2fea4f83be0239180f558c27
