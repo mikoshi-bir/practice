@@ -1,2 +1,2 @@
 Ссылка на теорию: https://fortunate-taste-a91.notion.site/16-theory-6f58f91c77704b06b518064ad8546254?pvs=4
-Ссылка на soft skills: 
+Ссылка на soft skills: https://fortunate-taste-a91.notion.site/16-soft-skills-8cdbc156f76d42698b4576f7c5b1e42b?pvs=4
