@@ -1,0 +1,1 @@
+Ссылка на софт-скиллы и результаты теста: https://fortunate-taste-a91.notion.site/22-test-soft-skills-a030cf7e597047dab418ee3151c1a05c?pvs=4
