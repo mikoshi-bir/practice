@@ -1,0 +1,2 @@
+Ссылка на софт-скиллы: https://fortunate-taste-a91.notion.site/23-soft-skills-030945a1c7544179a23ea8be48eb04d8?pvs=4
+Ссылка на второе задание:

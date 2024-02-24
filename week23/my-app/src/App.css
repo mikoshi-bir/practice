@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+.listOfPlans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header {
+  margin: 0;
+  border: #ffffff solid 1px;
+}
+h2 {
+  margin: 0;
+}
+.cost {
+  display: flex;
+  justify-content: center;
+  border: #ffffff solid 1px;
+}
+
+.footer {
+  background-color: #dcdddc;
+  padding: 5px;
+}
+
+.highlighted {
+  margin: -5px;
+}
+
