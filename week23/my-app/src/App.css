@@ -27,7 +27,11 @@ h2 {
   padding: 5px;
 }
 
-.highlighted {
-  margin: -5px;
+.card {
+  cursor: pointer;
 }
 
+.selectedPlan {
+  margin: 10px;
+  font-size: 25px;
+}

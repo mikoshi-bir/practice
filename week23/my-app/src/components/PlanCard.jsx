@@ -1,10 +1,10 @@
 import cx from "classnames";
 
-export default function PlanCard({ plan }) {
+export default function PlanCard({ plan, onSelected }) {
   return (
     <div
       className={cx("card", plan.isHighlighted ? "highlighted" : null)}
-      
+      onClick={() => onSelected ? onSelected() : null}
     >
       <header className="header" style={{ background: plan.hearderColor }}>
         <h2>Безлимитный {plan.cost}</h2>
