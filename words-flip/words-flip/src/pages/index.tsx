@@ -18,6 +18,7 @@ export default function Home() {
   const onFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setLoading(true)
+    setError(null)
     queryWords(subject)
       .then((result) => {
         setSavedWords(result)
