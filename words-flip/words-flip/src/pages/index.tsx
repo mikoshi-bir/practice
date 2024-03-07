@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label'
 import { FormEvent, useState } from 'react'
 import { useSavedWords } from '@/lib/hooks/useSavedWords'
 import { queryWords } from '@/lib/queryWords'
-import { ButtonWithSpinner } from '@/components/ui/loading'
+import { ButtonWithSpinner } from '@/components/ui/button-with-spinner'
 
 const inter = Inter({ subsets: ['latin'] })
 
