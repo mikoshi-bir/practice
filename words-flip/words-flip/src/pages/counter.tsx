@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 export default function Counter() {
   const [counter, setCounter] = useState<number[]>([])
 
+  useLayoutEffect(() => {
+    document.getElementById('efdefe')
+  })
   console.log(counter.slice(-1))
   return (
     <div>

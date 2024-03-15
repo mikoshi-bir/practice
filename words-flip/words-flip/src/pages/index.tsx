@@ -6,6 +6,7 @@ import { FormEvent, useState } from 'react'
 import { useSavedWords } from '@/lib/hooks/useSavedWords'
 import { queryWords } from '@/lib/queryWords'
 import { ButtonWithSpinner } from '@/components/ui/button-with-spinner'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +15,7 @@ export default function Home() {
   const { setSavedWords, savedWords } = useSavedWords()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const router = useRouter()
 
   const onFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -22,6 +24,7 @@ export default function Home() {
     queryWords(subject)
       .then((result) => {
         setSavedWords(result)
+        router.push('/learn')
       })
       .catch((err) => {
         setError(err.message)
