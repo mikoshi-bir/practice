@@ -2,6 +2,7 @@ import { useLocalStorage } from 'usehooks-ts'
 
 export type Options = {
   showWordsTranslation: boolean
+  unlearnIncorrectWords: boolean
 }
 
 export function useUiOptions() {
@@ -9,6 +10,7 @@ export function useUiOptions() {
     'ui-options',
     {
       showWordsTranslation: true,
+      unlearnIncorrectWords: true,
     },
     {
       initializeWithValue: false,
@@ -29,6 +31,5 @@ export function useUiOptions() {
         showWordsTranslation: !prevOptions.showWordsTranslation,
       }))
     },
-    
   }
 }

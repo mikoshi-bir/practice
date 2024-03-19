@@ -1,8 +1,9 @@
-import WordCard from '@/components/ui/word-card'
+import WordCard from '@/components/ui/wordCard'
 import { useSavedWords } from '@/lib/hooks/useSavedWords'
 import { Button } from '@/components/ui/button'
 import { useUiOptions } from '@/lib/hooks/useUiOptions'
 import Link from 'next/link'
+import { WordCardLayout } from '@/components/ui/wordCardLayout'
 
 export default function LearnPage() {
   const {
@@ -16,13 +17,12 @@ export default function LearnPage() {
 
   const { toggleWordsTranslation, showWordsTranslation } = useUiOptions()
 
-  console.log('saved words: ', savedWords)
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">
+    <div className="flex flex-col gap-5">
+      <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight ">
         Слова для изучения
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <WordCardLayout>
         {getUnlearnedWords().map((word) => {
           return (
             <WordCard
@@ -34,11 +34,11 @@ export default function LearnPage() {
             />
           )
         })}
-      </div>
-      <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight my-5">
+      </WordCardLayout>
+      <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
         Изученные слова
       </h2>
-      <div className="flex flex-col sm:gap-3 sm:flex-row gap-2 my-5">
+      <div className="flex flex-col sm:gap-3 sm:flex-row gap-2">
         <Button onClick={toggleWordsTranslation} variant="secondary">
           {showWordsTranslation
             ? 'Скрыть перевод слов'
@@ -48,7 +48,7 @@ export default function LearnPage() {
           Пометить все слова как неизученные
         </Button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <WordCardLayout>
         {getLearnedWords().map((word) => {
           return (
             <WordCard
@@ -60,7 +60,7 @@ export default function LearnPage() {
             />
           )
         })}
-      </div>
+      </WordCardLayout>
       <div className="flex justify-center">
         <Button asChild className="my-5 w-full max-w-52" variant="secondary">
           <Link href="/">Сделать новый запрос</Link>

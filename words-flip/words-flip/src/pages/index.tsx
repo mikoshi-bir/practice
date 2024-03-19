@@ -5,13 +5,21 @@ import { Label } from '@/components/ui/label'
 import { FormEvent, useState } from 'react'
 import { useSavedWords } from '@/lib/hooks/useSavedWords'
 import { queryWords } from '@/lib/queryWords'
-import { ButtonWithSpinner } from '@/components/ui/button-with-spinner'
+import { ButtonWithSpinner } from '@/components/ui/buttonWithSpinner'
 import { useRouter } from 'next/router'
-
-const inter = Inter({ subsets: ['latin'] })
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 export default function Home() {
   const [subject, setSubject] = useState('')
+  const [wordCount, setWordCount] = useState('10')
   const { setSavedWords, savedWords } = useSavedWords()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -21,7 +29,7 @@ export default function Home() {
     event.preventDefault()
     setLoading(true)
     setError(null)
-    queryWords(subject)
+    queryWords(subject, Number(wordCount))
       .then((result) => {
         setSavedWords(result)
         router.push('/learn')
@@ -37,7 +45,7 @@ export default function Home() {
   return (
     <form
       onSubmit={onFormSubmit}
-      className={`max-w-screen-md flex min-h-screen flex-col p-24 gap-5 ${inter.className}`}
+      className="flex-col flex gap-5 max-w-screen-md "
     >
       <Label htmlFor="message-2">
         Укажите тематику слов, которые хотите изучать
@@ -53,12 +61,31 @@ export default function Home() {
       <p className="text-sm text-muted-foreground">
         Так мы сможем подобрать вам слова, которые вы хотите изучить
       </p>
+      <Label htmlFor="word-count">Количество слов</Label>
+      <Select onValueChange={(value) => setWordCount(value)} value={wordCount}>
+        <SelectTrigger className="w-[180px]">
+          <SelectValue placeholder="Количество слов" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>Количество</SelectLabel>
+            <SelectItem value="10">10</SelectItem>
+            <SelectItem value="15">15</SelectItem>
+            <SelectItem value="20">20</SelectItem>
+            <SelectItem value="25">25</SelectItem>
+            <SelectItem value="30">30</SelectItem>
+          </SelectGroup>
+        </SelectContent>
+      </Select>
       <ButtonWithSpinner loading={loading} />
       {error ? (
         <div className="text-sm text-muted-foreground text-red-600">
           Возникла ошибка: {error}
         </div>
       ) : null}
+      <p className="text-sm text-muted-foreground">
+        Генерация слов займет какое-то время в зависимости от кол-ва слов
+      </p>
     </form>
   )
 }

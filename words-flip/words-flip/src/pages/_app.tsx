@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
+import { Layout } from '@/components/fragments/layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +12,9 @@ export default function MyApp({ Component, pageProps }) {
           font-family: ${inter.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

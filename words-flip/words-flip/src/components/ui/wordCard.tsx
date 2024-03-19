@@ -19,12 +19,12 @@ export default function WordCard({
   const shouldShowWordsTranslation = showWordsTranslation || !isLearned
 
   return (
-    <div className="p-6 group flex flex-col text-center rounded-lg border p-3 text-sm transition-all hover:bg-accent relative">
+    <div className="p-6 group flex flex-col text-center rounded-lg border p-3 text-sm transition-all sm:hover:bg-accent relative ">
       <TrashIcon
         onClick={(event) => {
           onWordRemoved()
         }}
-        className="opacity-0 [&:not(:hover)]:group-hover:opacity-70 hover:opacity-100 cursor-pointer absolute right-5 top-5"
+        className="opacity-0 [&:not(:hover)]:group-hover:opacity-70 hover:opacity-100 cursor-pointer absolute right-5 top-5 max-sm:opacity-100"
       />
       <h5 className="text-xl leading-tight font-medium">{text}</h5>
       <span className="text-gray-500 text-sm ">{transcription}</span>
@@ -39,7 +39,7 @@ export default function WordCard({
           onClick={(event) => {
             onLearnedChange()
           }}
-          className="opacity-0 group-hover:opacity-100 "
+          className="opacity-0 group-hover:opacity-100 max-sm:opacity-100 "
           variant="ghost"
         >
           {isLearned ? 'Не изучено' : 'Изучено'}
