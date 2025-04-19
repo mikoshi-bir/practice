@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.title {
+  color: pink;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 70px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  padding: 30px 0;
+  background-color: #efecfa;
+}
+.main-text {
+  max-width: 700px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.flower img {
+  max-height: 250px;
+}
+.right-flower {
+  transform: scaleX(-1);
+}
+
+.btn {
+  background-color: #ffc0cb;
+  border-radius: 7px;
+  border-color: #ffa4b3;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.btn:hover {
+  background: #fc9cac;
+}
+.btn:active {
+  background: #fc8296;
+}
+
+.thank {
+  font-size: 20px;
+  margin-top: 20px;
+  margin: 0;
+  color: #fa3355;
+}
+
+.footer {
+  display: none;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.footer img {
+  max-height: 150px;
+  animation-name: turn-flowers;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@media (max-width: 1200px) {
+  .flower {
+    display: none;
+  }
+  .main-content {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 700px) {
+  .footer-flower {
+    display: none;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .main-text {
+    font-size: 20px;
+    margin: 0 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+  .main-text {
+    font-size: 17px;
+    margin: 0 1rem;
+  }
+  .btn {
+    font-size: 18px;
+  }
+}
+
+@keyframes turn-flowers {
+  from {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -20deg;
+  }
+  75% {
+    rotate: 20deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
