@@ -1,0 +1,59 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #629199;
+}
+
+header {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  color: #ff751f;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+.intro {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 50px;
+}
+
+.intro p {
+  font-size: 20px;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 50px;
+  margin: 50px 100px;
+}
+
+.rule {
+  background-color: #466a70;
+  color: aliceblue;
+  padding: 20px;
+  border: 2px solid #ff751f;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.rule h3 {
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.rule:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
